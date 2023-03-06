@@ -13,13 +13,13 @@ terraform {
     null = {
       source = "hashicorp/null"
     }
-    
+
 
   }
 
   ####
-backend "remote" {
-    hostname = "app.terraform.io"
+  backend "remote" {
+    hostname     = "app.terraform.io"
     organization = "cloud4c-sg"
 
     workspaces {
