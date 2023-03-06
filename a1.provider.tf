@@ -22,7 +22,14 @@ terraform {
     }
 
   }
-  ####
+  backend "remote" {
+      hostname="app.terraform.io"
+      organization = "cloud4cvpc" 
+      workspace {
+        prefix = "vpc-"
+      }
+    }
+   ####
 
 }
 #provider block
