@@ -10,8 +10,3 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "user_name" {
-  type    = list(string)
-  default = ["darth", "yoda"]
-  # key = value
-}
