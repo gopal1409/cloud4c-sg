@@ -13,19 +13,18 @@ terraform {
     null = {
       source = "hashicorp/null"
     }
-
+    backend "remote" {
+      hostname     = "app.terraform.io"
+      organization = "cloud4cvpc"
+      workspace {
+        prefix = "vpc-"
+      }
+    }
 
   }
 
   ####
-  backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "cloud4c-sg"
 
-    workspaces {
-      prefix = "vpc-"
-    }
-  }
 }
 #provider block
 provider "aws" {
