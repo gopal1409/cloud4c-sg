@@ -3,7 +3,7 @@ module "private_sg" {
   version = "4.17.1"
   ###name of the sg need to be changes
   name                = "private-sg-gopal"
-  vpc_id              =  data.terraform_remote_state.vpc.vpc_id
+  vpc_id              =  data.terraform_remote_state.vpc.outputs.aws_region
   ingress_rules       = ["ssh-tcp", "http-80-tcp"]
   ingress_cidr_blocks = ["0.0.0.0/0"]
   egress_rules        = ["all-all"]
